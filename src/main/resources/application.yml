@@ -1,0 +1,10 @@
+welcome:
+  message: "lel"
+spring:
+  jpa:
+    hibernate:
+      ddl-auto: none
+  datasource:
+    url: jdbc:mysql://www.jdowd.name:3306/test
+    username: jdowd
+    password: x^907Mjnf0
