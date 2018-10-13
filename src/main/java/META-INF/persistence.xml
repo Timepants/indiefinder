@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence xmlns="http://java.sun.com/xml/ns/persistence" version="2.0">
+
+    <persistence-unit name="NewPersistenceUnit">
+        <provider>org.hibernate.jpa.HibernatePersistenceProvider</provider>
+        <class>com.example.indiefinder.entities.AlbumEntity</class>
+        <class>com.example.indiefinder.entities.ArtistEntity</class>
+        <class>com.example.indiefinder.entities.GenreEntity</class>
+        <class>com.example.indiefinder.entities.GenreSongIntersectionEntity</class>
+        <class>com.example.indiefinder.entities.PublisherEntity</class>
+        <class>com.example.indiefinder.entities.SongEntity</class>
+        <class>com.example.indiefinder.entities.SongAlbumIntersectionEntity</class>
+        <class>com.example.indiefinder.entities.SongArtistIntersectionEntity</class>
+        <class>com.example.indiefinder.entities.UserEntity</class>
+        <class>com.example.indiefinder.entities.UserArtistIntersectionEntity</class>
+        <class>com.example.indiefinder.entities.UserSongIntersectionEntity</class>
+        <properties>
+            <property name="hibernate.connection.url" value="jdbc:mysql://www.jdowd.name:3306/indiefind"/>
+            <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
+            <property name="hibernate.connection.username" value=""/>
+            <property name="hibernate.connection.password" value=""/>
+            <property name="hibernate.archive.autodetection" value="class"/>
+            <property name="hibernate.show_sql" value="true"/>
+            <property name="hibernate.format_sql" value="true"/>
+            <property name="hbm2ddl.auto" value="update"/>
+        </properties>
+    </persistence-unit>
+</persistence>
