@@ -1,4 +1,4 @@
-package com.example.indiefinder.entities;
+package com.example.indiefinder.repository;
 
 import org.springframework.data.jpa.repository.JpaRepository;
 
