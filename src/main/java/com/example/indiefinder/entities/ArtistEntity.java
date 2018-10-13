@@ -1,7 +1,9 @@
 package com.example.indiefinder.entities;
 
 import javax.persistence.*;
+import java.util.HashSet;
 import java.util.Objects;
+import java.util.Set;
 
 @Entity
 @Table(name = "artist", schema = "indiefind", catalog = "")
@@ -10,6 +12,17 @@ public class ArtistEntity {
     private String firstName;
     private String lastName;
     private String middleName;
+
+
+    private Set<SongEntity> songs = new HashSet<>();
+    @ManyToMany(mappedBy = "artists")
+    public Set<SongEntity> getSongs() {
+        return songs;
+    }
+
+    public void setSongs(Set<SongEntity> songs) {
+        this.songs = songs;
+    }
 
     @Id
     @Column(name = "artistID")

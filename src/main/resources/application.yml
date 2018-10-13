@@ -1,11 +1,14 @@
-welcome:
-  message: "Josh is a bub"
+locations:
+  song-url-header: "https://www.jdowd.name/indiefind/music/"
+  album-art-url-header: "https://www.jdowd.name/indiefind/albumArt/"
 spring:
   jpa:
     hibernate:
       ddl-auto: none
+      naming:
+        physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
   datasource:
-    url: jdbc:mysql://www.jdowd.name:3306/test
+    url: jdbc:mysql://www.jdowd.name:3306/indiefind
     username: jdowd
     password: x^907Mjnf0
 server:
