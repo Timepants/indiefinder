@@ -15,6 +15,7 @@ public class WelcomeController {
 
     @RequestMapping("/")
     public String welcome(Map<String, Object> model) {
+        model.put("message", message);
         return "welcome";
     }
     @RequestMapping("/test")
