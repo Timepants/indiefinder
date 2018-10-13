@@ -20,7 +20,7 @@ public class UserSongIntersectionEntity {
         this.userId = userId;
     }
 
-    @Id
+    @Basic
     @Column(name = "songID")
     public Integer getSongId() {
         return songId;

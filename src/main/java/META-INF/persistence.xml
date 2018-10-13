@@ -6,13 +6,13 @@
         <class>com.example.indiefinder.entities.AlbumEntity</class>
         <class>com.example.indiefinder.entities.ArtistEntity</class>
         <class>com.example.indiefinder.entities.GenreEntity</class>
-        <class>com.example.indiefinder.entities.GenreSongIntersectionEntity</class>
+        <!--<class>com.example.indiefinder.entities.GenreSongIntersectionEntity</class>-->
         <class>com.example.indiefinder.entities.PublisherEntity</class>
         <class>com.example.indiefinder.entities.SongEntity</class>
-        <class>com.example.indiefinder.entities.SongAlbumIntersectionEntity</class>
-        <class>com.example.indiefinder.entities.SongArtistIntersectionEntity</class>
+        <!--<class>com.example.indiefinder.entities.SongAlbumIntersectionEntity</class>-->
+        <!--<class>com.example.indiefinder.entities.SongArtistIntersectionEntity</class>-->
         <class>com.example.indiefinder.entities.UserEntity</class>
-        <class>com.example.indiefinder.entities.UserArtistIntersectionEntity</class>
+        <!--<class>com.example.indiefinder.entities.UserArtistIntersectionEntity</class>-->
         <class>com.example.indiefinder.entities.UserSongIntersectionEntity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://www.jdowd.name:3306/indiefind"/>
