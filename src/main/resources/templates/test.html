@@ -101,11 +101,22 @@
                             "name": "Risin' High (feat Raashan Ahmad)",
                             "artist": [[${message}]],
                             "album": "Ancient Astronauts",
-                            "url": [[${musHeader}]] + [[${musId}]] + ".mp3",
+                            "url": [[${musHeader}]] + "1"+ ".mp3",
                             "cover_art_url": [[${artHeader}]] + "1.jpg"
                         }
-                    ]
+                    ],
+                    "callbacks": {
+                        'after_play': function(){
+                            playCount++;
+                            if (playCount > 0) {
+                                location.reload();
+                            }
+
+                        }
+                    }
                 });
+
+
 
                 window.onkeydown = function(e) {
                     return !(e.keyCode == 32);
