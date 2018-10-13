@@ -1,5 +1,5 @@
 welcome:
-  message: "lel"
+  message: "Josh is a bub"
 spring:
   jpa:
     hibernate:
@@ -8,3 +8,5 @@ spring:
     url: jdbc:mysql://www.jdowd.name:3306/test
     username: jdowd
     password: x^907Mjnf0
+server:
+  port: 8888
