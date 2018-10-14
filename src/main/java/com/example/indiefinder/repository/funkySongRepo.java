@@ -73,7 +73,7 @@ public interface funkySongRepo extends CrudRepository<funkySong, Long> {
                     "                                      left join (\n" +
                     "                                                  SELECT\n" +
                     "                                                    songID as songID,\n" +
-                    "                                                    max(liked) as liked\n" +
+                    "                                                    sum(liked) as liked\n" +
                     "                                                  FROM user_song_intersection\n" +
                     "                                                  group by songID\n" +
                     "                                                ) as likedSongs\n" +
@@ -103,4 +103,10 @@ public interface funkySongRepo extends CrudRepository<funkySong, Long> {
             procedureName = "setBoiz"
     )
     void setTheBoiz();
+//    @Query(
+//            nativeQuery = true,
+//            value = "call spGetSong"
+//
+//    )
+//    funkySong spGetSong();
 }

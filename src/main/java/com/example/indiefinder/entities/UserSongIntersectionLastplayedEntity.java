@@ -2,6 +2,7 @@ package com.example.indiefinder.entities;
 
 import javax.persistence.*;
 import java.sql.Timestamp;
+import java.util.Date;
 import java.util.Objects;
 
 @Entity
@@ -10,6 +11,13 @@ public class UserSongIntersectionLastplayedEntity {
     private Integer userId;
     private Integer songId;
     private Timestamp datePlayed;
+    public UserSongIntersectionLastplayedEntity(){}
+    public UserSongIntersectionLastplayedEntity(Integer userId, Integer songId){
+        this.userId = userId;
+        this.songId = songId;
+        Date date= new Date();
+        datePlayed= new Timestamp(new Date().getTime());
+    }
 
     @Id
     @Column(name = "userID")

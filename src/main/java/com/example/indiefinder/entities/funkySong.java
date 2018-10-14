@@ -51,7 +51,7 @@ public class funkySong {
     public void setReleaseDate(Date releaseDate) {
         this.releaseDate = releaseDate;
     }
-
+    @Basic
     public int getAlbumId() {
         return albumId;
     }
@@ -59,7 +59,7 @@ public class funkySong {
     public void setAlbumId(int albumId) {
         this.albumId = albumId;
     }
-
+    @Basic
     public String getArtistName() {
         return artistName;
     }
