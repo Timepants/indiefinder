@@ -14,6 +14,7 @@
         <class>com.example.indiefinder.entities.UserEntity</class>
         <!--<class>com.example.indiefinder.entities.UserArtistIntersectionEntity</class>-->
         <class>com.example.indiefinder.entities.UserSongIntersectionEntity</class>
+        <class>com.example.indiefinder.entities.UserSongIntersectionLastplayedEntity</class>
         <properties>
             <property name="hibernate.connection.url" value="jdbc:mysql://www.jdowd.name:3306/indiefind"/>
             <property name="hibernate.connection.driver_class" value="com.mysql.jdbc.Driver"/>
