@@ -43,6 +43,7 @@ public class SongEntity {
         this.genres = genres;
     }
 
+
     private Set<ArtistEntity> artists = new HashSet<>();
 
 

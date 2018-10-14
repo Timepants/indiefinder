@@ -89,7 +89,7 @@
                     </div>
                 </div>
             </div>
-            <script type="text/javascript" th:inline="javascript">
+            <script type="text/javascript">
                 Amplitude.init({
                     "bindings": {
                         37: 'prev',
@@ -98,13 +98,26 @@
                     },
                     "songs": [
                         {
-                            "name": "Risin' High (feat Raashan Ahmad)",
-                            "artist": [[${message}]],
-                            "album": "Ancient Astronauts",
-                            "url": [[${musHeader}]] + "1.mp3",
-                            "cover_art_url": [[${artHeader}]] + "1.jpg"
+                            "name": "[[${songName}]]",
+                            "artist": "[[${artistName}]]",
+                            "album": "[[${albumName}]]",
+                            "url": "[[${musHeader}]]" + "[[${songID}]]"+ ".mp3",
+                            "cover_art_url": "[[${artHeader}]]" + "[[${albumID}]].jpg"
                         }
-                    ]
+                    ],
+                    "callbacks": {
+                        'time_update': function(){
+                            // playCount++;
+                            // if (playCount >= 0) {
+                            if (Amplitude.getSongPlayedPercentage() != null && Amplitude.getSongPlayedPercentage() > 99.99) {
+                                // alert(Amplitude.getSongPlayedPercentage());
+                                location.reload();
+                            }
+                        }
+
+                    },
+                    "autoplay": true
+
                 });
 
                 window.onkeydown = function(e) {

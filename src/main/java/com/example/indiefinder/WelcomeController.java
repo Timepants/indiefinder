@@ -1,6 +1,8 @@
 package com.example.indiefinder;
 
+import com.example.indiefinder.entities.funkySong;
 import com.example.indiefinder.repository.AlbumRepository;
+import com.example.indiefinder.repository.funkySongRepo;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -20,7 +22,7 @@ public class WelcomeController {
     private String artHeader;
 
     @Autowired
-    AlbumRepository albumRepository;
+    funkySongRepo songer;
 
     @RequestMapping("/")
     public String welcome(Map<String, Object> model) {
@@ -29,11 +31,23 @@ public class WelcomeController {
     }
     @RequestMapping("/test")
     public String test(Map<String, Object> model) {
-//        model.put("id", albumRepository.findAll().get(0).getAlbumId());
-//        model.put("name", albumRepository.findAll().get(0).getName());
         model.put("message", message);
         model.put("musHeader", musHeader);
         model.put("artHeader", artHeader);
+        funkySong song = null;
+        do {
+            songer.setTheBoiz();
+            song = songer.spGetSong();
+        } while (song == null);
+        model.put("songID", song.getSongId());
+        model.put("songName", song.getNameOfSong());
+        model.put("albumName", song.getAlbumName());
+        model.put("artistName", song.getArtistName());
+        if (song.getAlbumId() != 0){
+            model.put("albumID", song.getAlbumId());
+        } else {
+            model.put("albumID", 1);
+        }
         return "test";
     }
     @RequestMapping("/index")
@@ -41,7 +55,20 @@ public class WelcomeController {
         model.put("message", message);
         model.put("musHeader", musHeader);
         model.put("artHeader", artHeader);
-
+        funkySong song = null;
+        do {
+            songer.setTheBoiz();
+            song = songer.spGetSong();
+        } while (song == null);
+        model.put("songID", song.getSongId());
+        model.put("songName", song.getNameOfSong());
+        model.put("albumName", song.getAlbumName());
+        model.put("artistName", song.getArtistName());
+        if (song.getAlbumId() != 0){
+            model.put("albumID", song.getAlbumId());
+        } else {
+            model.put("albumID", 1);
+        }
         return "index";
 
     }

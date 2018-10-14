@@ -3,7 +3,9 @@ locations:
   album-art-url-header: "https://www.jdowd.name/indiefind/albumArt/"
 spring:
   jpa:
+    show-sql: true
     hibernate:
+      format_sql: true
       ddl-auto: none
       naming:
         physical-strategy: org.hibernate.boot.model.naming.PhysicalNamingStrategyStandardImpl
@@ -13,3 +15,5 @@ spring:
     password: x^907Mjnf0
 server:
   port: 8888
+hibernate:
+  dialect: org.hibernate.dialect.MySQLDialect
