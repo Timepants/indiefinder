@@ -98,13 +98,26 @@
                 },
                 "songs": [
                     {
-                        "name": "Risin' High (feat Raashan Ahmad)",
-                        "artist": "Ancient Astronauts",
-                        "album": "We Are to Answer",
-                        "url": "../music/2.mp3",
-                        "cover_art_url": "../art/anvil.jpg"
+                        "name": "[[${songName}]]",
+                        "artist": "[[${artistName}]]",
+                        "album": "[[${albumName}]]",
+                        "url": "[[${musHeader}]]" + "[[${songID}]]"+ ".mp3",
+                        "cover_art_url": "[[${artHeader}]]" + "[[${albumID}]].jpg"
                     }
-                ]
+                ],
+                "callbacks": {
+                    'time_update': function(){
+                        // playCount++;
+                        // if (playCount >= 0) {
+                        if (Amplitude.getSongPlayedPercentage() != null && Amplitude.getSongPlayedPercentage() > 99.99) {
+                            // alert(Amplitude.getSongPlayedPercentage());
+                            location.reload();
+                        }
+                        }
+
+                    },
+                "autoplay": true
+
             });
 
             window.onkeydown = function(e) {
