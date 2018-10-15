@@ -92,12 +92,8 @@
 
             <form th:action="@{/downVote}" method="get">
                 <input type="hidden" th:value="${songID}" name="id"/>
-               <input class="waves-effect waves-light btn" type="submit" value="No Like" />
+                <input class="waves-effect waves-light btn" type="submit" value="No Like" />
             </form>
-            <!--<form th:action="@{/upVote}" method="get">-->
-                <!--<input type="hidden" th:value="${songID}" name="id"/>-->
-                <!--<input type="submit" value="Like" />-->
-            <!--</form>-->
             <button class="waves-effect waves-light btn" id="upVote">upvote</button>
             <button class="waves-effect waves-light btn" id="skip">skip</button>
         </div>

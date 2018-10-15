@@ -65,15 +65,15 @@ public interface funkySongRepo extends CrudRepository<funkySong, Long> {
                     "                                        g.genreID as genreID\n" +
                     "                                      , sum(IF(liked=1, 1, 0)) as isLikedMod\n" +
                     "                                      , sum(IF(liked  is null, .25, 0)) as isUnknownMod\n" +
-                    "                                      , sum(IF(liked=0, -1, 0)) as isDislikedMod\n" +
-                    "                                      , (sum(IF(liked=1, 1, 0)) + sum(IF(liked  is null, .25, 0)) + sum(IF(liked=0, -1, 0))) as sums\n" +
+                    "                                      , sum(IF(liked=0, -2, 0)) as isDislikedMod\n" +
+                    "                                      , (sum(IF(liked=1, 1, 0)) + sum(IF(liked  is null, .25, 0)) + sum(IF(liked<0, liked-1, 0))) as sums\n" +
                     "\n" +
                     "\n" +
                     "                                    from user_song_intersection_lastplayed lp\n" +
                     "                                      left join (\n" +
                     "                                                  SELECT\n" +
                     "                                                    songID as songID,\n" +
-                    "                                                    sum(liked) as liked\n" +
+                    "                                                    sum(if(liked=0,-1,liked)) as liked\n" +
                     "                                                  FROM user_song_intersection\n" +
                     "                                                  group by songID\n" +
                     "                                                ) as likedSongs\n" +

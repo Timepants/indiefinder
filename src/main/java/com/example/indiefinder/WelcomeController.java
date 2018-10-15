@@ -44,34 +44,31 @@ public class WelcomeController {
 
     @RequestMapping("/")
     public String welcome(Map<String, Object> model) {
-        model.put("message", message);
-        return "welcome";
+//        model.put("message", message);
+        return "index";
     }
-    @RequestMapping("/test")
+    @RequestMapping("/musicplayer")
     public String test(Map<String, Object> model) {
         loadPlayer(model);
-        return "test";
+        return "musicplayer";
     }
     @RequestMapping("/index")
     public String index(Map<String, Object> model) {
         model.put("message", message);
         model.put("musHeader", musHeader);
         model.put("artHeader", artHeader);
-        funkySong song = null;
-        do {
-            songer.setTheBoiz();
-            song = songer.spGetSong();
-        } while (song == null);
-        model.put("songID", song.getSongId());
-        model.put("songName", song.getNameOfSong());
-        model.put("albumName", song.getAlbumName());
-        model.put("artistName", song.getArtistName());
-        if (song.getAlbumId() != 0){
-            model.put("albumID", song.getAlbumId());
-        } else {
-            model.put("albumID", 1);
-        }
+
         return "index";
+
+    }
+
+    @RequestMapping("/playlist")
+    public String playlist(Map<String, Object> model) {
+        model.put("message", message);
+        model.put("musHeader", musHeader);
+        model.put("artHeader", artHeader);
+
+        return "playlist";
 
     }
 
@@ -79,27 +76,34 @@ public class WelcomeController {
     public String downVote(Map<String, Object> model, @RequestParam String id) {
         userSongIntersectionRepository.create(Integer.parseInt(id), 1, (byte)0);
         loadPlayer(model);
-        return "test";
+        return "musicplayer";
     }
 
     @GetMapping("/upVote")
     public String upVote(Map<String, Object> model, @RequestParam String id) {
         userSongIntersectionRepository.create(Integer.parseInt(id), 1, (byte)1);
         loadPlayer(model);
-        return "test";
+        return "musicplayer";
     }
-
+private Integer lastSongPlayed = 0;
+    private Integer lastSongPlayed2 = 0;
     private void loadPlayer(Map<String, Object> model){
         model.put("message", message);
         model.put("musHeader", musHeader);
         model.put("artHeader", artHeader);
         funkySong song = null;
+        int i = 0;
         do {
-            songer.setTheBoiz();
-            song = songer.spGetSong();
-        } while (song == null);
+            i++;
+            System.out.println("lastSong"+lastSongPlayed);
+            do {
+                songer.setTheBoiz();
+                song = songer.spGetSong();
+            } while (song == null);
+        } while (i<4&&(lastSongPlayed == song.getSongId() || lastSongPlayed2 == song.getSongId()));
         lastplayedRepository.create(song.getSongId(), 1, new Timestamp(new Date().getTime()));
-
+        lastSongPlayed2 = lastSongPlayed;
+        lastSongPlayed = song.getSongId();
 
         model.put("songID", song.getSongId());
         model.put("songName", song.getNameOfSong());
