@@ -1,22 +1,20 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<svg width="75px" height="75px" viewBox="0 0 75 75" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
-    <title>Group</title>
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<svg width="60px" height="60px" viewBox="0 0 60 60" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 41.2 (35397) - http://www.bohemiancoding.com/sketch -->
+    <title>Oval 1</title>
     <desc>Created with Sketch.</desc>
     <defs></defs>
-    <g id="05.02.00-Example-SingleSong" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <g id="HD_05.02.00-Example-SingleSong" transform="translate(-537.000000, -574.000000)">
-            <g id="Body" transform="translate(48.000000, 180.000000)">
-                <g id="Content">
-                    <g id="Example" transform="translate(318.000000, 0.000000)">
-                        <g id="Player" transform="translate(148.000000, 95.000000)">
-                            <g id="Bottom" transform="translate(0.000000, 285.000000)">
-                                <g id="Play/Pause" transform="translate(24.000000, 15.000000)">
-                                    <g id="Group">
-                                        <circle id="Oval" stroke="#42435F" cx="36.5" cy="36.5" r="36.5"></circle>
-                                        <path d="M30.521,23 L26.193,23 C24.982,23 24,23.98 24,25.201 L24,48.793 C24,50.014 24.982,51 26.193,51 L30.521,51 C31.732,51 32.709,50.014 32.709,48.793 L32.709,25.201 C32.709,23.985 31.732,23 30.521,23 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
-                                        <path d="M46.908,23 L42.578,23 C41.369,23 40.39,23.98 40.39,25.201 L40.39,48.793 C40.39,50.014 41.369,51 42.578,51 L46.908,51 C48.121,51 49.096,50.014 49.096,48.793 L49.096,25.201 C49.104,23.985 48.121,23 46.908,23 Z" id="Shape" fill="#FFFFFF" fill-rule="nonzero"></path>
-                                    </g>
+    <g id="05.100.00-OpenSource-Amplitude" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="HD_05.100.00-521Website_OpenSource-Amplitude" transform="translate(-515.000000, -772.000000)">
+            <g id="Lead-in">
+                <g id="Player" transform="translate(368.000000, 359.000000)">
+                    <g id="Controllers/Status/Info" transform="translate(0.000000, 357.000000)">
+                        <g id="Controls" transform="translate(114.000000, 56.000000)">
+                            <g id="Play/Pause" transform="translate(33.000000, 0.000000)">
+                                <g id="Oval-1">
+                                    <circle fill="#00A0FF" cx="30" cy="30" r="30"></circle>
+                                    <path d="M40.587,16.61 L36.257,16.61 C35.048,16.61 34.069,17.59 34.069,18.811 L34.069,42.403 C34.069,43.624 35.048,44.61 36.257,44.61 L40.587,44.61 C41.8,44.61 42.775,43.624 42.775,42.403 L42.775,18.811 C42.783,17.595 41.8,16.61 40.587,16.61 L40.587,16.61 Z" id="Shape" fill="#FFFFFF"></path>
+                                    <path d="M24.2,16.61 L19.872,16.61 C18.661,16.61 17.679,17.59 17.679,18.811 L17.679,42.403 C17.679,43.624 18.661,44.61 19.872,44.61 L24.2,44.61 C25.411,44.61 26.388,43.624 26.388,42.403 L26.388,18.811 C26.388,17.595 25.411,16.61 24.2,16.61 L24.2,16.61 Z" id="Shape" fill="#FFFFFF"></path>
                                 </g>
                             </g>
                         </g>
